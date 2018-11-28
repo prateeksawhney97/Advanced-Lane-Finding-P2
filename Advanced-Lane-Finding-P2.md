@@ -19,6 +19,11 @@
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
+##### Distortion Corrected Calibrated Image
+
+![input](https://user-images.githubusercontent.com/34116562/49130314-4d274d80-f2f9-11e8-8ef8-c6697e9ff4c5.png)
+
+
 ## Pipeline (test images)
 
 #### 1. Provide an example of a distortion-corrected image.
