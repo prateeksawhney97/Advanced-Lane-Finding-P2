@@ -132,6 +132,6 @@ https://www.youtube.com/watch?v=5q50SOwfwAg
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project. Where will your pipeline likely fail? What could you do to make it more robust?
 
-The project video ran smoothly. There will some errors in the starting but after that it was successfully drawing the lane area over the road. I also ran the Pipeline over the challenge video and the hard-challenge video. 
+The project video ran smoothly.  It was successfully drawing the lane area over the road with the radius of curvature and center offset clearly plotted and changing their values. I also ran the Pipeline over the challenge video and the hard-challenge video. 
 
 I think the pipeline will fail when the road curves a lot and there is a sudden change in the direction like the roads in hilly areas as the case in hard-challenge-video. Some measures could be taken so as to adjust the pipeline so that it also draws lane areas over the roads of hilly areas as well i.e. where there are a lot of curves.
