@@ -67,6 +67,12 @@ I performed gradient threshold and color threshold individually and then created
 
 ### Finding the lines - Search From Prior and fitting a polynomial
 
+![output_1](https://user-images.githubusercontent.com/34116562/49129956-b60dc600-f2f7-11e8-82e2-c8e48d9e3d3f.png)
+![output_2](https://user-images.githubusercontent.com/34116562/49129958-b73ef300-f2f7-11e8-9898-bada3f974564.png)
+![output_3](https://user-images.githubusercontent.com/34116562/49129959-b8702000-f2f7-11e8-9477-95f0ef30d523.png)
+![output_4](https://user-images.githubusercontent.com/34116562/49129961-b9a14d00-f2f7-11e8-8d33-315251f554fb.png)
+![output_5](https://user-images.githubusercontent.com/34116562/49129965-bb6b1080-f2f7-11e8-9d74-91581421f7f2.png)
+![output_6](https://user-images.githubusercontent.com/34116562/49129969-bdcd6a80-f2f7-11e8-8428-96e62595f872.png)
 
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
