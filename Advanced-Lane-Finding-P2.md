@@ -27,12 +27,15 @@
 
 ![output](https://user-images.githubusercontent.com/34116562/49130381-a4c5b900-f2f9-11e8-954f-d7f68e7e4768.png)
 
+The first step in the pipeline is to undistort the camera. Some images of a 9x6 chessboard are given and are distorted. Our task is to find the Chessboard corners an plot them. For this, after loading the images we calibrate the camera. Open CV functions like findChessboardCorners(), drawChessboardCorners() and calibrateCamera() help us do this.
 
 ## Pipeline (test images)
 
 #### 1. Provide an example of a distortion-corrected image.
 
 #### Some examples of Distortion Corrected Images are given below.
+
+The images in the test_images folder serve as our original image. Our task is to Undistort them. For this, I defined a function cal_undistort() which takes in a image and returns the undistorted one using cv2.undistort().
 
 #### These images are Distortion Corrected :
 
@@ -58,6 +61,14 @@ I performed gradient threshold and color threshold individually and then created
 
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
+
+Perspective Transform is the Bird's eye view for Lane images. We want to look at the lanes from the top and have a clear picture about their curves. Implementing Perspective Transform was the most interesting one for me. I used values of src and dst as shown below: 
+
+src = np.float32([[590,450],[687,450],[1100,720],[200,720]])
+dst = np.float32([[300,0],[900,0],[900,720],[300,720]])
+
+Also, made a function warper(img, src, dst) which takes in the BInary Warped Image and return the perspective transform using cv2.getPerspectiveTransform(src, dst) and cv2.warpPerspective(img, M, img_size, flags=cv2.INTER_NEAREST). The results are shown below:
+
 
 ![output_1](https://user-images.githubusercontent.com/34116562/49129781-1d774600-f2f7-11e8-80df-2d0d6b0a3950.png)
 ![output_2](https://user-images.githubusercontent.com/34116562/49129782-1f410980-f2f7-11e8-894a-94fdf6f519d8.png)
