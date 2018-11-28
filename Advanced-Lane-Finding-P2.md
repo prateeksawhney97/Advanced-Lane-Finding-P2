@@ -4,11 +4,11 @@
 
 # The Steps involved are:
 
-### Computing the camera calibration matrix and distortion coefficients given a set of chessboard images. (9x6)
-### Apply a distortion correction to raw images.
-### Use color transforms, gradients, etc., to create a thresholded binary image.
-### Apply a perspective transform to rectify binary image ("birds-eye view") to get a warped image.
-### Detect lane pixels and fit to find the lane boundary.
-### Determine the real curvature of the lane and vehicle position with respect to center.
-### Warp the detected lane boundaries back onto the original image.
-### Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
+#### Computing the camera calibration matrix and distortion coefficients given a set of chessboard images. (9x6)
+#### Apply a distortion correction to raw images.
+#### Use color transforms, gradients, etc., to create a thresholded binary image.
+#### Apply a perspective transform to rectify binary image ("birds-eye view") to get a warped image.
+#### Detect lane pixels and fit to find the lane boundary.
+#### Determine the real curvature of the lane and vehicle position with respect to center.
+#### Warp the detected lane boundaries back onto the original image.
+#### Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
