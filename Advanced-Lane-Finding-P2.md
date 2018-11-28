@@ -134,4 +134,6 @@ https://www.youtube.com/watch?v=5q50SOwfwAg
 
 The project video ran smoothly.  It was successfully drawing the lane area over the road with the radius of curvature and center offset clearly plotted and changing their values. I also ran the Pipeline over the challenge video and the hard-challenge video. 
 
+For a standout submission, I followed the suggestion in the lesson to not just search blindly for the lane lines in each frame of video, but rather, once I have a high-confidence detection, using that to inform the search for the position of the lines in subsequent frames of video. For example, if a polynomial fit was found to be robust in the previous frame, then rather than search the entire next frame for the lines, just a window around the previous detection could be searched. This will improve speed and provide a more robust method for rejecting outliers. I performed this step with the help of search_around_poly(image) function.
+
 I think the pipeline will fail when the road curves a lot and there is a sudden change in the direction like the roads in hilly areas as the case in hard-challenge-video. Some measures could be taken so as to adjust the pipeline so that it also draws lane areas over the roads of hilly areas as well i.e. where there are a lot of curves.
