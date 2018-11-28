@@ -57,6 +57,18 @@ I performed gradient threshold and color threshold individually and then created
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
+### Finding the lines - Sliding Window and fitting a polynomial
+
+![output_1](https://user-images.githubusercontent.com/34116562/49129915-9bd3e800-f2f7-11e8-9d7b-7ee1480b480c.png)
+![output_2](https://user-images.githubusercontent.com/34116562/49129917-9c6c7e80-f2f7-11e8-8b37-4791cb2e60e3.png)
+![output_3](https://user-images.githubusercontent.com/34116562/49129920-9e364200-f2f7-11e8-9852-5e35607d7c07.png)
+![output_4](https://user-images.githubusercontent.com/34116562/49129924-9f676f00-f2f7-11e8-81fb-aa529361acfc.png)
+
+
+### Finding the lines - Search From Prior and fitting a polynomial
+
+
+
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
