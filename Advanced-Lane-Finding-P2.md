@@ -95,6 +95,10 @@ I performed gradient threshold and color threshold individually and then created
 
 #### 1. Provide a link to your final video output. Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!)
 
+##### Here is the Link to the Project Video 
+
+https://www.youtube.com/watch?v=5q50SOwfwAg
+
 # Discussion
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project. Where will your pipeline likely fail? What could you do to make it more robust?
