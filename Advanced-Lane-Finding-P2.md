@@ -19,6 +19,8 @@
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
+The first step in the pipeline is to undistort the camera. Some images of a 9x6 chessboard are given and are distorted. Our task is to find the Chessboard corners an plot them. For this, after loading the images we calibrate the camera. Open CV functions like findChessboardCorners(), drawChessboardCorners() and calibrateCamera() help us do this.
+
 ##### Distortion Corrected Calibrated Image:
 
 ![input](https://user-images.githubusercontent.com/34116562/49130314-4d274d80-f2f9-11e8-8ef8-c6697e9ff4c5.png)
@@ -27,7 +29,7 @@
 
 ![output](https://user-images.githubusercontent.com/34116562/49130381-a4c5b900-f2f9-11e8-954f-d7f68e7e4768.png)
 
-The first step in the pipeline is to undistort the camera. Some images of a 9x6 chessboard are given and are distorted. Our task is to find the Chessboard corners an plot them. For this, after loading the images we calibrate the camera. Open CV functions like findChessboardCorners(), drawChessboardCorners() and calibrateCamera() help us do this.
+
 
 ## Pipeline (test images)
 
@@ -65,6 +67,7 @@ I performed gradient threshold and color threshold individually and then created
 Perspective Transform is the Bird's eye view for Lane images. We want to look at the lanes from the top and have a clear picture about their curves. Implementing Perspective Transform was the most interesting one for me. I used values of src and dst as shown below: 
 
 src = np.float32([[590,450],[687,450],[1100,720],[200,720]])
+
 dst = np.float32([[300,0],[900,0],[900,720],[300,720]])
 
 Also, made a function warper(img, src, dst) which takes in the BInary Warped Image and return the perspective transform using cv2.getPerspectiveTransform(src, dst) and cv2.warpPerspective(img, M, img_size, flags=cv2.INTER_NEAREST). The results are shown below:
@@ -79,6 +82,8 @@ Also, made a function warper(img, src, dst) which takes in the BInary Warped Ima
 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
+
+Once I got the Perspective Transform of the binary warped images, I first used the sliding window method to plot the lane lines and fitted a polynomial using fit_polynomial(img) function. Later on, I used the Search from prior technique and fitted a more accurate polynomial through my perspective transformed images using search_around_poly(image) funtion. Proper markings are there in the code to indicate each and every step.
 
 ### Finding the lines - Sliding Window and fitting a polynomial
 
@@ -100,7 +105,11 @@ Also, made a function warper(img, src, dst) which takes in the BInary Warped Ima
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
+For calculating the radius of curvature and the position of the vehicle with respect to center, I made a function called radius_and_offset(warped_image) which returns curvature_string and offset. Used left_lane_inds and right_lane_inds for performing the task. Used function fit_poly(image.shape, leftx, lefty, rightx, righty) which returns left_fitx, right_fitx, ploty to calcuate the real radius of curvature and offset.
+
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
+
+After implementing all the steps, it's time to create the pipeline for one image. Created a function process_image() as the main pipeline function. Also, I put the Radius of Curvature and Center Offset on the final image using cv2.putText() function. The result is shown below: 
 
 ##### Lane Area Drawn without Information:
 
